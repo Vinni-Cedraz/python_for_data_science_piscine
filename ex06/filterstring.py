@@ -13,9 +13,9 @@ def filter_words(text, length_threshold):
         list: A list of words from the text that exceed the length threshold.
     """
     words = text.split(" ")
-    filtered_words = [
-            ft_filter(lambda word: len(word) > length_threshold, words)
-    ]
+    filtered_words = ft_filter(
+            lambda word: len(word) > length_threshold, words
+    )
     return filtered_words
 
 
