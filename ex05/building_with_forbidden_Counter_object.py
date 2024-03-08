@@ -1,6 +1,6 @@
 import sys
 import string
-import collections
+from collections import Counter
 
 
 def count_characters(text):
@@ -20,10 +20,9 @@ def count_characters(text):
         "digits": string.digits,
         "spaces": string.whitespace,
     }
-    results = collections.Counter(
+    results = Counter(
             category for char in text
-            for category, chars in classifiers.items()
-            if char in chars
+            for category, chars in classifiers.items() if char in chars
     )
     results["punctuation"] = len(text) - sum(results.values())
     results["len"] = len(text)
