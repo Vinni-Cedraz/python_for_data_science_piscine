@@ -4,11 +4,9 @@ from ft_filter import ft_filter
 
 def filter_words(text, length_threshold):
     """Filters words from a text string based on their length.
-
     Args:
         text (str): The input text string.
         length_threshold (int):  Words longer than this threshold are included.
-
     Returns:
         list: A list of words from the text that exceed the length threshold.
     """
